@@ -10,15 +10,15 @@ public class Mostrar {
 		Scanner s = new Scanner(System.in);
 		int res = 0;
 		while (res != 0) {
-			System.out.println("Escolha uma operaÁ„o: ");
+			System.out.println("Escolha uma opera√ß√£o: ");
 			System.out.println("1 - Soma ");
-			System.out.println("2 - SubtraÁ„o ");
+			System.out.println("2 - Subtra√ß√£o ");
 			System.out.println("3 - Soma ");
 			System.out.println("4 - Soma ");
 			System.out.println("0 - Sair ");
 			res = s.nextInt();
 			if (res != 0)
-				System.out.println("o resultado È: " + selecao(res));
+				System.out.println("o resultado √©: " + selecao(res));
 		}
 	}
 
@@ -30,38 +30,42 @@ public class Mostrar {
 		int posi = 0;
 		int[] nums = new int [1000000];
 		if (res == 1) {
-			while (!ss.equals("n")){
+			while (!ss.equals("n") || posi == 1000000){
 				nums[posi] = s.nextInt();
 				posi++;
-				System.out.println("Deseja adicionar outro numero? (s: sim/n: n„o)");
-				ss = s.next();
+				System.out.println("Deseja adicionar outro numero? (s: sim/n: n√£o)");
+				s.nextLine();
+				ss = s.nextLine();
 			}
 			resul = c.somar(nums);
 		}
 		if (res == 2) {
-			while (!ss.equals("n")){
+			while (!ss.equals("n") || posi == 1000000){
 				nums[posi] = s.nextInt();
 				posi++;
-				System.out.println("Deseja adicionar outro numero? (s: sim/n: n„o)");
-				ss = s.next();
+				System.out.println("Deseja adicionar outro numero? (s: sim/n: n√£o)");
+				s.nextLine();
+				ss = s.nextLine();
 			}
 			resul = c.subtrair(nums);
 		}
 		if (res == 3) {
-			while (!ss.equals("n")){
+			while (!ss.equals("n") || posi == 1000000){
 				nums[posi] = s.nextInt();
 				posi++;
-				System.out.println("Deseja adicionar outro numero? (s: sim/n: n„o)");
-				ss = s.next();
+				System.out.println("Deseja adicionar outro numero? (s: sim/n: n√£o)");
+				s.nextLine();
+				ss = s.nextLine();
 			}
 			resul = c.dividir(nums);
 		}
 		if (res == 4) {
-			while (!ss.equals("n")){
+			while (!ss.equals("n") || posi == 1000000){
 				nums[posi] = s.nextInt();
 				posi++;
-				System.out.println("Deseja adicionar outro numero? (s: sim/n: n„o)");
-				ss = s.next();
+				System.out.println("Deseja adicionar outro numero? (s: sim/n: n√£o)");
+				s.nextLine();
+				ss = s.nextLine();
 			}
 			resul = c.multiplicar(nums);
 		}
